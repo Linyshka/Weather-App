@@ -1,6 +1,8 @@
+import SideBar from './conponents/SideBar'
+
 function App() {
 
-  return <h1>Weather app</h1>
+  return <SideBar />
 }
 
 export default App
