@@ -1,6 +1,6 @@
 // Это тестовые данные, которые потом будут удалены
 
-import { DayPropInterface, WeatherPropInterface } from "./interfaces/";
+import { DayPropInterface, TimeForecastInterface, WeatherPropInterface } from "./interfaces/";
 
 export const weatherProperties: Array<WeatherPropInterface> = [
   {
@@ -70,4 +70,23 @@ export const daysForecastArray: Array<DayPropInterface> = [
     minTemperature: 0,
     maxTemperature: 12
   }
+];
+
+export const timeForecastArray: Array<TimeForecastInterface> = [
+  {
+    time: "Now",
+    temperature: 25
+  },
+  {
+    time: "10AM",
+    temperature: 25
+  },
+  {
+    time: "11AM",
+    temperature: 25
+  },
+  {
+    time: "12AM",
+    temperature: 25
+  },
 ]

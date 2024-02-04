@@ -16,3 +16,8 @@ export interface DayPropInterface {
   minTemperature: number;
   maxTemperature: number;
 }
+
+export interface TimeForecastInterface {
+  time: string;
+  temperature: number;
+}
