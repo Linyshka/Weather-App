@@ -8,7 +8,7 @@ function LocationWidget({location} : LocationProps) {
   const date = new Date();
 
   return (
-    <div style={{border: "1px solid black", padding: "10px"}}>
+    <div style={{border: "1px solid black", width: "500px"}}>
       {location.isMyLocation ? (
         <div>
           <h1>My location</h1>

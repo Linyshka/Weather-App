@@ -1,8 +1,14 @@
-import SideBar from './conponents/SideBar'
+import SideBar from "./conponents/SideBar";
+import WeatherProperties from './conponents/WeatherProperties';
 
 function App() {
-
-  return <SideBar />
+  return (
+    <>
+      <WeatherProperties />
+      <hr />
+      <SideBar />
+    </>
+  );
 }
 
-export default App
+export default App;
