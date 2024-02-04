@@ -1,14 +1,14 @@
-import LocationInterface from '../../interfaces/sideBarInterfaces';
+import { LocationInterface } from "../../interfaces/";
 
 type LocationProps = {
   location: LocationInterface;
-}
+};
 
-function LocationWidget({location} : LocationProps) {
+function LocationWidget({ location }: LocationProps) {
   const date = new Date();
 
   return (
-    <div style={{border: "1px solid black", width: "500px"}}>
+    <div style={{ border: "1px solid black", width: "500px" }}>
       {location.isMyLocation ? (
         <div>
           <h1>My location</h1>
@@ -17,7 +17,9 @@ function LocationWidget({location} : LocationProps) {
       ) : (
         <div>
           <h1>{location.city}</h1>
-          <h2>{date.getHours()}:{date.getMinutes()}</h2>
+          <h2>
+            {date.getHours()}:{date.getMinutes()}
+          </h2>
         </div>
       )}
       <p>Partly cloudy</p>

@@ -1,4 +1,4 @@
-import WeatherPropInterface from '../../interfaces/weatherPropsInterfaces';
+import {WeatherPropInterface} from '../../interfaces/';
 
 type Props = {
   item: WeatherPropInterface

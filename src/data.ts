@@ -1,35 +1,73 @@
- // Это тестовые данные, которые потом будут удалены
+// Это тестовые данные, которые потом будут удалены
 
-import weatherPropInterface from './interfaces/weatherPropsInterfaces';
+import { DayPropInterface, WeatherPropInterface } from "./interfaces/";
 
- export const weatherProperties: Array<weatherPropInterface> = [
+export const weatherProperties: Array<WeatherPropInterface> = [
   {
     title: "UV INDEX",
     value: "2 Middle",
-    description: "Low for the rest of the day"
+    description: "Low for the rest of the day",
   },
   {
     title: "SUNRISE",
     value: "11.28 AM",
-    description: "Sunrise: 9:45 PM"
+    description: "Sunrise: 9:45 PM",
   },
   {
     title: "WIND",
-    value: "25 m/s"
+    value: "25 m/s",
   },
   {
     title: "FEELS LIKE",
     value: "25°",
-    description: "Similar to the actual temperature"
+    description: "Similar to the actual temperature",
   },
   {
     title: "HUMIDITY",
     value: "98%",
-    description: "The dew point is 18° right now."
+    description: "The dew point is 18° right now.",
   },
   {
     title: "VISIBILITY",
     value: "5 км",
-    description: "Visibility is poor due to weather conditions"
+    description: "Visibility is poor due to weather conditions",
+  },
+];
+
+export const daysForecastArray: Array<DayPropInterface> = [
+  {
+    day: "Mon",
+    minTemperature: 0,
+    maxTemperature: 12
+  },
+  {
+    day: "Mon",
+    minTemperature: 0,
+    maxTemperature: 12
+  },
+  {
+    day: "Mon",
+    minTemperature: 0,
+    maxTemperature: 12
+  },
+  {
+    day: "Mon",
+    minTemperature: 0,
+    maxTemperature: 12
+  },
+  {
+    day: "Mon",
+    minTemperature: 0,
+    maxTemperature: 12
+  },
+  {
+    day: "Mon",
+    minTemperature: 0,
+    maxTemperature: 12
+  },
+  {
+    day: "Mon",
+    minTemperature: 0,
+    maxTemperature: 12
   }
- ]
+]
