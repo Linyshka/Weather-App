@@ -1,4 +1,4 @@
-import { TimeForecastInterface } from "../../interfaces";
+import { TimeForecastInterface } from "@/interfaces";
 
 type TimeProps = {
   item: TimeForecastInterface;

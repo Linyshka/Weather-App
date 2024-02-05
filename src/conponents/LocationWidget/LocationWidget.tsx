@@ -1,4 +1,4 @@
-import { LocationInterface } from "../../interfaces/";
+import { LocationInterface } from "@/interfaces/";
 
 type LocationProps = {
   location: LocationInterface;

@@ -1,4 +1,4 @@
-import { DayPropInterface } from '../../interfaces';
+import { DayPropInterface } from '@/interfaces';
 
 type DayProps = {
   day: DayPropInterface

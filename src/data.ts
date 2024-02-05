@@ -1,6 +1,6 @@
 // Это тестовые данные, которые потом будут удалены
 
-import { DayPropInterface, TimeForecastInterface, WeatherPropInterface } from "./interfaces/";
+import { DayPropInterface, TimeForecastInterface, WeatherPropInterface } from "@/interfaces/";
 
 export const weatherProperties: Array<WeatherPropInterface> = [
   {

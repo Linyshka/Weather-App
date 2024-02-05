@@ -1,4 +1,4 @@
-import { weatherProperties } from '../../data'
+import { weatherProperties } from '@/data'
 import PropertyItem from '../PropertyItem'
 
 function WeatherProperties() {

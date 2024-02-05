@@ -1,4 +1,4 @@
-import { daysForecastArray } from '../../data';
+import { daysForecastArray } from '@/data';
 import DayItem from '../DayItem';
 
 function TenDaysForecast() {

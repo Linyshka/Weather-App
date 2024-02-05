@@ -1,5 +1,5 @@
-import { timeForecastArray } from '../../data';
-import TimeItem from '../TimeItem/TimeItem';
+import { timeForecastArray } from '@/data';
+import TimeItem from '../TimeItem/';
 
 function TimeForecast() {
   return (
