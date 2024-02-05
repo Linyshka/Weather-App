@@ -1,8 +1,8 @@
-import SideBar from "@/conponents/SideBar";
-import TenDaysForecast from '@/conponents/TenDaysForecast';
-import TimeForecast from '@/conponents/TimeForecast';
-import TodayForecast from '@/conponents/TodayForecast';
-import WeatherProperties from '@/conponents/WeatherProperties';
+import SideBar from "@/components/SideBar";
+import TenDaysForecast from '@/components/TenDaysForecast';
+import TimeForecast from '@/components/TimeForecast';
+import TodayForecast from '@/components/TodayForecast';
+import WeatherProperties from '@/components/WeatherProperties';
 
 function App() {
   return (
