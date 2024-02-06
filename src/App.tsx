@@ -1,22 +1,13 @@
 import SideBar from "@/components/SideBar";
-import TenDaysForecast from '@/components/TenDaysForecast';
-import TimeForecast from '@/components/TimeForecast';
-import TodayForecast from '@/components/TodayForecast';
-import WeatherProperties from '@/components/WeatherProperties';
+import MainPage from './components/MainPage';
+import "./App.scss";
 
 function App() {
   return (
-    <>
-      <TodayForecast />
-      <hr />
-      <TimeForecast />
-      <hr />
-      <TenDaysForecast />
-      <hr />
-      <WeatherProperties />
-      <hr />
+    <main className="main">
+      <MainPage />
       <SideBar />
-    </>
+    </main>
   );
 }
 
