@@ -1,6 +1,23 @@
-function App() {
+import SideBar from "@/components/SideBar";
+import TenDaysForecast from '@/components/TenDaysForecast';
+import TimeForecast from '@/components/TimeForecast';
+import TodayForecast from '@/components/TodayForecast';
+import WeatherProperties from '@/components/WeatherProperties';
 
-  return <h1>Weather app</h1>
+function App() {
+  return (
+    <>
+      <TodayForecast />
+      <hr />
+      <TimeForecast />
+      <hr />
+      <TenDaysForecast />
+      <hr />
+      <WeatherProperties />
+      <hr />
+      <SideBar />
+    </>
+  );
 }
 
-export default App
+export default App;

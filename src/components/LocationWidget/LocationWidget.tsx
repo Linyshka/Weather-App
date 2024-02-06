@@ -1,0 +1,30 @@
+import { LocationProps } from './types';
+
+function LocationWidget({ location }: LocationProps) {
+  const date = new Date();
+
+  return (
+    <div style={{ border: "1px solid black", width: "500px" }}>
+      {location.isMyLocation ? (
+        <div>
+          <h2>My location</h2>
+          <h2>{location.city}</h2>
+        </div>
+      ) : (
+        <div>
+          <h2>{location.city}</h2>
+          <h2>
+            {date.getHours()}:{date.getMinutes()}
+          </h2>
+        </div>
+      )}
+      <p>Partly cloudy</p>
+      <div>
+        <h3>21&deg;</h3>
+        <p>H:29&deg; L:15&deg;</p>
+      </div>
+    </div>
+  );
+}
+
+export default LocationWidget;
