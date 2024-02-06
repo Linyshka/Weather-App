@@ -1,8 +1,4 @@
-import { DayPropInterface } from '@/interfaces';
-
-type DayProps = {
-  day: DayPropInterface
-}
+import { DayProps } from './types';
 
 function DayItem({day} : DayProps) {
   return <>

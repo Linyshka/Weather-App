@@ -1,8 +1,4 @@
-import { LocationInterface } from "@/interfaces/";
-
-type LocationProps = {
-  location: LocationInterface;
-};
+import { LocationProps } from './types';
 
 function LocationWidget({ location }: LocationProps) {
   const date = new Date();

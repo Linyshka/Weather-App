@@ -1,8 +1,4 @@
-import { TimeForecastInterface } from "@/interfaces";
-
-type TimeProps = {
-  item: TimeForecastInterface;
-};
+import { TimeProps } from './types';
 
 function TimeItem({ item }: TimeProps) {
   return (
