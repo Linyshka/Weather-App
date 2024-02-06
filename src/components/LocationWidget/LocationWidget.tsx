@@ -7,12 +7,12 @@ function LocationWidget({ location }: LocationProps) {
     <div style={{ border: "1px solid black", width: "500px" }}>
       {location.isMyLocation ? (
         <div>
-          <h1>My location</h1>
+          <h2>My location</h2>
           <h2>{location.city}</h2>
         </div>
       ) : (
         <div>
-          <h1>{location.city}</h1>
+          <h2>{location.city}</h2>
           <h2>
             {date.getHours()}:{date.getMinutes()}
           </h2>
