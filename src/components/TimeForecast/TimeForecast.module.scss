@@ -3,9 +3,9 @@
 .timeForecast {
   padding: 10px;
 
-  color: #373C42;
+  color: var(--secondary-color);
 
-  @include background(rgba(255, 255, 255, 0.1), blur(145px));
+  @include background(var(--primary-background), blur(145px));
   border-radius: 15px;
 
   h2 {
@@ -22,6 +22,6 @@
     height: 122px;
     padding-top: 8px;
     
-    border-top: 0.2px solid rgba(55, 60, 66, 0.5);
+    border-top: 0.2px solid var(--line-color);
   }
 }

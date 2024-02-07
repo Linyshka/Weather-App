@@ -6,14 +6,14 @@
   text-align: center;
   padding: 14px 0;
 
-  @include background(rgba(255, 255, 255, 0.1), blur(145px));
-  border: 0.5px solid rgba(255, 255, 255, 0);
+  @include background(var(--primary-background), blur(145px));
+  border: 0.5px solid var(--border-color);
   border-radius: 15px;
 
   h2 {
     margin-bottom: 20px;
 
-    color: rgb(66, 66, 66);
+    color: var(--primary-color);
     
     font-family: 'SF Medium';
     font-size: 15px;

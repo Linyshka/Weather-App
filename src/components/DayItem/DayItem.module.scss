@@ -4,12 +4,12 @@
   height: 55px;
   margin: 15px 20px;
   
-  border-bottom: 0.2px solid rgba(66, 66, 66, 0.5);
+  border-bottom: 0.2px solid var(--line-color);
 
   span {
     font-family: 'SF Medium';
     font-size: 22px;
-    color: rgb(66, 66, 66);
+    color: var(--primary-color);
   }
 
   div {

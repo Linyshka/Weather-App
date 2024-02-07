@@ -17,17 +17,17 @@
     height: 200px;
     padding: 14px 13px 14px 20px;
 
-    color: rgb(60, 60, 60);
+    color: var(--primary-color);
 
-    @include background(rgba(255, 255, 255, 0.1), blur(145px));
-    border: 0.6px solid rgba(255, 255, 255, 0.25);
+    @include background(var(--primary-background), blur(145px));
+    border: 0.6px solid var(--border-color);
     border-radius: 18px;
 
     h2 {
       margin-top: 10px;
       font-family: "SF Medium";
       font-size: 19px;
-      color: rgba(0, 0, 0, 0.3);
+      color: var(--black);
     }
 
     span {
