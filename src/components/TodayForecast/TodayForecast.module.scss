@@ -1,0 +1,27 @@
+.todayForecast {
+  padding: 0 40px;
+  text-align: center;
+  color: #fff;
+
+  h1 {
+    font-size: 37px;
+    font-weight: 400;
+    height: 44px;
+  }
+
+  span {
+    font-family: "SF Ultralight";
+    font-size: 102px;
+    height: 122px;
+  }
+
+  p {
+    height: 29px;
+    font-size: 24px;
+
+    :nth-child(2) {
+      font-family: "SF Medium";
+      font-size: 21px;
+    }
+  }
+}
