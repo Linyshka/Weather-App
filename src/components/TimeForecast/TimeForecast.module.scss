@@ -1,0 +1,27 @@
+@import "@/assets/styles/mixins.scss";
+
+.timeForecast {
+  padding: 10px;
+
+  color: var(--secondary-color);
+
+  @include background(var(--primary-background), blur(145px));
+  border-radius: 15px;
+
+  h2 {
+    max-width: 287px;
+    margin-bottom: 8px;
+
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .timeBlock {
+    display: flex;
+    justify-content: space-between;
+    height: 122px;
+    padding-top: 8px;
+    
+    border-top: 0.2px solid var(--line-color);
+  }
+}

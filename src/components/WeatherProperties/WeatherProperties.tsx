@@ -1,19 +1,22 @@
-import { weatherProperties } from '@/data'
+import { weatherProperties } from '@/data';
+import styles from "./WeatherProperties.module.scss";
 
 function WeatherProperties() {
 
   return (
-    <>
+    <div className={styles.weatherProperties}>
       {weatherProperties.map((property, index) => {
         return (
-          <div key={index} style={{border: "1px solid black", width: "400px"}}>
-            <h2>{property.title}</h2>
-            <h2>{property.value}</h2>
-            {property.description && <h3>{property.description}</h3>}
+          <div className={styles.property} key={index}>
+            <div>
+              <h2>{property.title}</h2>
+              <span>{property.value}</span>
+            </div>
+            {property.description && <p>{property.description}</p>}
           </div>
         )
       } )}
-    </>
+    </div>
   )
 }
 

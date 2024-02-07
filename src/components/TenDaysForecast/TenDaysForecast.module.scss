@@ -1,0 +1,21 @@
+@import "@/assets/styles/mixins.scss";
+
+.daysForecast {
+  width: 45%;
+  
+  text-align: center;
+  padding: 14px 0;
+
+  @include background(var(--primary-background), blur(145px));
+  border: 0.5px solid var(--border-color);
+  border-radius: 15px;
+
+  h2 {
+    margin-bottom: 20px;
+
+    color: var(--primary-color);
+    
+    font-family: 'SF Medium';
+    font-size: 15px;
+  }
+}

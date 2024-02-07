@@ -1,0 +1,16 @@
+.timeItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    font-family: "SF Medium";
+    font-size: 22px;
+
+    &:first-child {
+      font-size: 17px;
+    }
+  }
+}
+

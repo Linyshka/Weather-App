@@ -1,0 +1,41 @@
+@import "@/assets/styles/mixins.scss";
+
+.weatherProperties {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 53px;
+  column-gap: 14px;
+  margin-top: 53px;
+  
+
+  .property {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31%;
+    height: 200px;
+    padding: 14px 13px 14px 20px;
+
+    color: var(--primary-color);
+
+    @include background(var(--primary-background), blur(145px));
+    border: 0.6px solid var(--border-color);
+    border-radius: 18px;
+
+    h2 {
+      margin-top: 10px;
+      font-family: "SF Medium";
+      font-size: 19px;
+      color: var(--black);
+    }
+
+    span {
+      font-size: 43px;
+    }
+
+    p {
+      font-size: 22px;
+    }
+  }
+}

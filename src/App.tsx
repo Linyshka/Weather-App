@@ -1,22 +1,17 @@
 import SideBar from "@/components/SideBar";
-import TenDaysForecast from '@/components/TenDaysForecast';
-import TimeForecast from '@/components/TimeForecast';
-import TodayForecast from '@/components/TodayForecast';
-import WeatherProperties from '@/components/WeatherProperties';
+import MainPage from './components/MainPage';
+import cloudly from './assets/videos/cloudly.mp4';
+import "./App.scss";
 
 function App() {
   return (
-    <>
-      <TodayForecast />
-      <hr />
-      <TimeForecast />
-      <hr />
-      <TenDaysForecast />
-      <hr />
-      <WeatherProperties />
-      <hr />
+    <main className="main">
+      <video autoPlay muted loop className="background">
+        <source src={cloudly} type="video/mp4" />
+      </video>
+      <MainPage />
       <SideBar />
-    </>
+    </main>
   );
 }
 

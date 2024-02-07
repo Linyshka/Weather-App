@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.background {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  
+  min-width: 100vw;
+  min-height: 100vh;
+}
