@@ -1,0 +1,23 @@
+.day {
+  margin: 15px 20px;
+  display: flex;
+  height: 55px;
+  justify-content: space-between;
+  border-bottom: 0.2px solid rgb(66, 66, 66, 0.5);
+
+  span {
+    font-family: "SF Medium";
+    font-size: 22px;
+    color: #424242;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+  }
+
+  progress {
+    width: 165px;
+  }
+}

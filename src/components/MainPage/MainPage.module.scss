@@ -1,0 +1,19 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  row-gap: 38px;
+  width: 65%;
+  padding: 0 19px 34px 40px;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  column-gap: 37px;
+
+  .dayForecast {
+    flex-direction: column;
+  }
+}

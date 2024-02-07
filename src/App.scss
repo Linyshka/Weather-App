@@ -1,6 +1,12 @@
 .main {
+  //max-width: 1922px;
   height: 100vh;
+  //margin: 0 auto;
   
   display: flex;
   justify-content: space-between;
+
+  background-image: url("./assets/images/Minsk.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

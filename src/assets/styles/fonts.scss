@@ -1,4 +1,17 @@
 @font-face {
   font-family: 'SF Normal';
+  font-weight: 400;
   src: url('../fonts/SF-Pro-Display-Regular.otf');
+}
+
+@font-face {
+  font-family: 'SF Medium';
+  font-weight: 500;
+  src: url('../fonts/SF-Pro-Display-Medium.otf');
+}
+
+@font-face {
+  font-family: 'SF Bold';
+  font-weight: 700;
+  src: url('../fonts/SF-Pro-Display-Bold.otf');
 }

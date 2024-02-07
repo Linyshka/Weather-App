@@ -1,0 +1,16 @@
+.daysForecast {
+  width: 49%;
+  border-radius: 15px;
+  border: 0.5px solid rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(145px);
+  text-align: center;
+  padding: 14px 0;
+
+  h2 {
+    font-family: "SF Medium";
+    font-size: 15px;
+    color: #424242;
+    margin-bottom: 20px;
+  }
+}

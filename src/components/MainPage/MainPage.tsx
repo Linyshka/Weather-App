@@ -3,16 +3,19 @@ import TimeForecast from "@/components/TimeForecast";
 import TodayForecast from "@/components/TodayForecast";
 import WeatherProperties from "@/components/WeatherProperties";
 
+import styles from "./MainPage.module.scss";
+
 function MainPage() {
   return (
-    <div>
+    <div className={styles.main}>
       <TodayForecast />
-      <hr />
-      <TimeForecast />
-      <hr />
-      <TenDaysForecast />
-      <hr />
-      <WeatherProperties />
+      <div className={styles.info}>
+        <TenDaysForecast />
+        <div className={styles.dayForecast}>
+          <TimeForecast />
+          <WeatherProperties />
+        </div>
+      </div>
     </div>
   );
 }
