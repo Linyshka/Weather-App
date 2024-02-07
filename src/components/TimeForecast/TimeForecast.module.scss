@@ -1,16 +1,18 @@
 .timeForecast {
-  border-radius: 15px;
-  background: rgba(255, 255, 255, 0.10);
-  backdrop-filter: blur(145px);
   padding: 10px;
 
   color: #373C42;
 
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(145px);
+  border-radius: 15px;
+
   h2 {
-    font-size: 18px;
     max-width: 287px;
-    font-weight: 400;
     margin-bottom: 8px;
+
+    font-size: 18px;
+    font-weight: 400;
   }
 
   .timeBlock {
@@ -18,6 +20,7 @@
     justify-content: space-between;
     height: 122px;
     padding-top: 8px;
+    
     border-top: 0.2px solid rgba(55, 60, 66, 0.5);
   }
 }

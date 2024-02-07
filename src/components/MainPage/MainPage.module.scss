@@ -9,12 +9,12 @@
 }
 
 .info {
-  width: 100%;
   display: flex;
   column-gap: 37px;
+  width: 100%;
 
   .dayForecast {
-    width: 54%;
     flex-direction: column;
+    width: 54%;
   }
 }
