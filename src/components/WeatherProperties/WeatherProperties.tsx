@@ -1,9 +1,9 @@
 import styles from "./WeatherProperties.module.scss";
 import { useContext } from "react";
-import { WeathereContext } from "@/App";
+import { WeatherContext } from "@/App";
 
 function WeatherProperties() {
-  const weatherData = useContext(WeathereContext);
+  const weatherData = useContext(WeatherContext);
 
   const properties = [
     [

@@ -2,10 +2,10 @@ import TimeItem from '../TimeItem';
 
 import style from "./TimeForecast.module.scss";
 import { useContext } from 'react';
-import { WeathereContext } from '@/App';
+import { WeatherContext } from '@/App';
 
 function TimeForecast() {
-  const weatherData = useContext(WeathereContext);
+  const weatherData = useContext(WeatherContext);
   return (
     <div className={style.timeForecast}>
       <h2>Cloudy conditions from 1AM-9AM, with showers expected at 9AM.</h2>

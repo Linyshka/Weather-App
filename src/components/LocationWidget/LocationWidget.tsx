@@ -4,17 +4,17 @@ import { useState, useEffect, useContext } from "react";
 import { fetchWeather } from "@/api";
 import { WeatherInterface } from "@/api/interfaces";
 import { weatherCodes } from "@/api/constants";
-import { WeathereContext } from '@/App';
+import { WeatherContext } from '@/App';
 
 function LocationWidget({ location }: LocationProps) {
   const [weatherData, setWeatherData] = useState<WeatherInterface>();
-  const setNewData = useContext(WeathereContext).setNewData;
+  const setNewData = useContext(WeatherContext).setNewData;
 
   useEffect(() => {
     fetchWeather(location.latitude, location.longitude).then((data) =>
       setWeatherData(data)
     );
-  }, []);
+  }, [location.latitude, location.longitude]);
 
   const changeMainWeather = () => {
     if (weatherData) {
