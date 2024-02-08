@@ -4,6 +4,7 @@ export interface ApiParamsInterface {
   current: string[];
   hourly: string[];
   daily: string[];
+  wind_speed_unit: "ms";
   timezone: string;
   start_date: string;
   end_date: string;
@@ -19,6 +20,11 @@ export interface CurrentDayInterface {
 export interface HourlyInterface {
   time: Date[];
   temperature2m: Float32Array;
+  relativeHumidity2m: Float32Array;
+  dewPoint2m: Float32Array;
+  apparentTemperature: Float32Array;
+  visibility: Float32Array;
+  windSpeed10m: Float32Array;
   isDay: Float32Array;
 }
 

@@ -1,6 +1,6 @@
 // Это тестовые данные, которые потом будут удалены
 
-import { DayPropInterface, TimeForecastInterface, WeatherPropInterface } from "@/interfaces/";
+import { TimeForecastInterface, WeatherPropInterface } from "@/interfaces/";
 
 export const weatherProperties: Array<WeatherPropInterface> = [
   {
@@ -34,43 +34,43 @@ export const weatherProperties: Array<WeatherPropInterface> = [
   },
 ];
 
-export const daysForecastArray: Array<DayPropInterface> = [
-  {
-    day: "Mon",
-    minTemperature: 0,
-    maxTemperature: 12
-  },
-  {
-    day: "Mon",
-    minTemperature: 0,
-    maxTemperature: 12
-  },
-  {
-    day: "Mon",
-    minTemperature: 0,
-    maxTemperature: 12
-  },
-  {
-    day: "Mon",
-    minTemperature: 0,
-    maxTemperature: 12
-  },
-  {
-    day: "Mon",
-    minTemperature: 0,
-    maxTemperature: 12
-  },
-  {
-    day: "Mon",
-    minTemperature: 0,
-    maxTemperature: 12
-  },
-  {
-    day: "Mon",
-    minTemperature: 0,
-    maxTemperature: 12
-  }
-];
+// export const daysForecastArray: Array<DayPropInterface> = [
+//   {
+//     day: "Mon",
+//     minTemperature: 0,
+//     maxTemperature: 12
+//   },
+//   {
+//     day: "Mon",
+//     minTemperature: 0,
+//     maxTemperature: 12
+//   },
+//   {
+//     day: "Mon",
+//     minTemperature: 0,
+//     maxTemperature: 12
+//   },
+//   {
+//     day: "Mon",
+//     minTemperature: 0,
+//     maxTemperature: 12
+//   },
+//   {
+//     day: "Mon",
+//     minTemperature: 0,
+//     maxTemperature: 12
+//   },
+//   {
+//     day: "Mon",
+//     minTemperature: 0,
+//     maxTemperature: 12
+//   },
+//   {
+//     day: "Mon",
+//     minTemperature: 0,
+//     maxTemperature: 12
+//   }
+// ];
 
 export const timeForecastArray: Array<TimeForecastInterface> = [
   {

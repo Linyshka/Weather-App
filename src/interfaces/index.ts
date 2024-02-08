@@ -14,7 +14,7 @@ export interface WeatherPropInterface {
 }
 
 export interface DayPropInterface {
-  day: string;
+  day: Date;
   minTemperature: number;
   maxTemperature: number;
 }

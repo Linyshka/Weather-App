@@ -6,12 +6,20 @@ import { ApiParamsInterface, WeatherInterface } from "./interfaces";
 export async function fetchWeather(): Promise<WeatherInterface> {
   const today = new Date();
   const after10Days = new Date();
-  after10Days.setDate(after10Days.getDate() + 10);
+  after10Days.setDate(after10Days.getDate() + 9);
   const params: ApiParamsInterface = {
     latitude: 53.9,
     longitude: 27.5667,
     current: ["temperature_2m", "is_day", "weather_code"],
-    hourly: ["temperature_2m", "is_day"],
+    hourly: [
+      "temperature_2m",
+      "relative_humidity_2m",
+      "dew_point_2m",
+      "apparent_temperature",
+      "visibility",
+      "wind_speed_10m",
+      "is_day",
+    ],
     daily: [
       "temperature_2m_max",
       "temperature_2m_min",
@@ -21,6 +29,7 @@ export async function fetchWeather(): Promise<WeatherInterface> {
       "precipitation_sum",
     ],
     timezone: "Europe/Moscow",
+    wind_speed_unit: "ms",
     start_date: convertDate(today),
     end_date: convertDate(after10Days),
   };
@@ -48,7 +57,12 @@ export async function fetchWeather(): Promise<WeatherInterface> {
         hourly.interval()
       ).map((t) => new Date((t + utcOffsetSeconds) * 1000)),
       temperature2m: hourly.variables(0)!.valuesArray()!,
-      isDay: hourly.variables(1)!.valuesArray()!,
+      relativeHumidity2m: hourly.variables(1)!.valuesArray()!,
+      dewPoint2m: hourly.variables(2)!.valuesArray()!,
+      apparentTemperature: hourly.variables(2)!.valuesArray()!,
+      visibility: hourly.variables(3)!.valuesArray()!,
+      windSpeed10m: hourly.variables(4)!.valuesArray()!,
+      isDay: hourly.variables(5)!.valuesArray()!,
     },
     daily: {
       time: range(
