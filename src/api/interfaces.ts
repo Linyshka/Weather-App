@@ -13,19 +13,17 @@ export interface ApiParamsInterface {
 export interface CurrentDayInterface {
   time: Date;
   temperature2m: number;
-  isDay: number;
+  relativeHumidity2m: number;
+  apparentTemperature: number;
   weatherCode: number;
+  windSpeed10m: number;
 }
 
 export interface HourlyInterface {
   time: Date[];
   temperature2m: Float32Array;
-  relativeHumidity2m: Float32Array;
   dewPoint2m: Float32Array;
-  apparentTemperature: Float32Array;
   visibility: Float32Array;
-  windSpeed10m: Float32Array;
-  isDay: Float32Array;
 }
 
 export interface DailyInterface {

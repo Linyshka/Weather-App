@@ -15,21 +15,21 @@ function WeatherProperties() {
       // Почему-то приходят очень большие числа...
       "WIND",
       `${Math.floor(
-        weatherData?.weatherData.hourly.windSpeed10m[0] as number
+        weatherData?.weatherData.current.weatherCode as number
       )} м\\с`,
       "",
     ],
     [
       "FEELS LIKE",
       `${Math.floor(
-        weatherData?.weatherData.hourly.apparentTemperature[0] as number
+        weatherData?.weatherData.current.apparentTemperature as number
       )}°`,
       "Similar to the actual temperature",
     ],
     [
       "HUMIDITY",
       `${Math.floor(
-        weatherData?.weatherData.hourly.relativeHumidity2m[0] as number
+        weatherData?.weatherData.current.relativeHumidity2m as number
       )} %`,
       `The dew point is ${Math.floor(
         weatherData?.weatherData.hourly.dewPoint2m[0] as number
@@ -39,7 +39,7 @@ function WeatherProperties() {
       // А здесь приходит отрицательное число...
       "VISIBILITY",
       `${Math.floor(
-        weatherData?.weatherData.hourly.visibility[0] as number
+        (weatherData?.weatherData.hourly.visibility[0] as number) / 1000
       )} км`,
       "Visibility is poor due to weather conditions",
     ],
