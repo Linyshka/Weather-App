@@ -1,12 +1,13 @@
 import { fetchWeatherApi } from "openmeteo";
 import { convertDate, range } from "./helpers";
 import { url } from "./constants";
+import { ApiParamsInterface, WeatherInterface } from "./interfaces";
 
-async function fetchWeather() {
+export async function fetchWeather(): Promise<WeatherInterface> {
   const today = new Date();
   const after10Days = new Date();
   after10Days.setDate(after10Days.getDate() + 10);
-  const params = {
+  const params: ApiParamsInterface = {
     latitude: 53.9,
     longitude: 27.5667,
     current: ["temperature_2m", "is_day", "weather_code"],
@@ -65,4 +66,4 @@ async function fetchWeather() {
   };
 }
 
-fetchWeather().then((weather) => console.log(weather))
+fetchWeather().then((weather) => console.log(weather));

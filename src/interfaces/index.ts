@@ -1,3 +1,5 @@
+import { WeatherInterface } from '@/api/interfaces';
+
 export interface LocationInterface {
   city: string;
   isMyLocation: boolean;
@@ -20,4 +22,8 @@ export interface DayPropInterface {
 export interface TimeForecastInterface {
   time: string;
   temperature: number;
+}
+
+export interface WeatherContextInterface {
+  weatherData: WeatherInterface;
 }
