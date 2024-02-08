@@ -6,17 +6,13 @@ function DayItem({ day }: DayProps) {
   return (
     <div className={styles.day}>
       <div>
-        <span>{day.day}</span>
-        <img src={sun} alt='weather-icon'/>
+        <span>{day.day.toLocaleString("en-US", { weekday: "short" })}</span>
+        <img src={sun} alt='weather-icon' />
       </div>
       <div>
-        <span>
-          {day.minTemperature}&deg;
-        </span>
+        <span>{Math.floor(day.minTemperature)}&deg;</span>
         <progress max={10} value={10} />
-        <span>
-          {day.maxTemperature}&deg;
-        </span>
+        <span>{Math.floor(day.maxTemperature)}&deg;</span>
       </div>
     </div>
   );
