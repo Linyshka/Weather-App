@@ -26,4 +26,5 @@ export interface TimeForecastInterface {
 
 export interface WeatherContextInterface {
   weatherData: WeatherInterface;
+  setNewData: (data: WeatherInterface) => void;
 }

@@ -3,13 +3,13 @@ import { convertDate, range } from "./helpers";
 import { url } from "./constants";
 import { ApiParamsInterface, WeatherInterface } from "./interfaces";
 
-export async function fetchWeather(): Promise<WeatherInterface> {
+export async function fetchWeather(latitude: number, longitude: number): Promise<WeatherInterface> {
   const today = new Date();
   const after10Days = new Date();
   after10Days.setDate(after10Days.getDate() + 9);
   const params: ApiParamsInterface = {
-    latitude: 53.9,
-    longitude: 27.5667,
+    latitude,
+    longitude,
     current: ["temperature_2m", "is_day", "weather_code"],
     hourly: [
       "temperature_2m",
@@ -28,7 +28,7 @@ export async function fetchWeather(): Promise<WeatherInterface> {
       "uv_index_max",
       "precipitation_sum",
     ],
-    timezone: "Europe/Moscow",
+    timezone: "GMT",
     wind_speed_unit: "ms",
     start_date: convertDate(today),
     end_date: convertDate(after10Days),
@@ -80,4 +80,4 @@ export async function fetchWeather(): Promise<WeatherInterface> {
   };
 }
 
-fetchWeather().then((weather) => console.log(weather));
+fetchWeather(53.9, 27.5667).then((weather) => console.log(weather));

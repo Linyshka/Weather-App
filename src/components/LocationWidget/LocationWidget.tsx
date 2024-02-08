@@ -1,11 +1,29 @@
 import { LocationProps } from "./types";
 import styles from "./LocationWidget.module.scss";
+import { useState, useEffect, useContext } from "react";
+import { fetchWeather } from "@/api";
+import { WeatherInterface } from "@/api/interfaces";
+import { weatherCodes } from "@/api/constants";
+import { WeathereContext } from '@/App';
 
 function LocationWidget({ location }: LocationProps) {
-  const date = new Date();
+  const [weatherData, setWeatherData] = useState<WeatherInterface>();
+  const setNewData = useContext(WeathereContext).setNewData;
+
+  useEffect(() => {
+    fetchWeather(location.latitude, location.longitude).then((data) =>
+      setWeatherData(data)
+    );
+  }, []);
+
+  const changeMainWeather = () => {
+    if (weatherData) {
+      setNewData(weatherData);
+    }
+  }
 
   return (
-    <div className={styles.location}>
+    <div className={styles.location} onClick={changeMainWeather}>
       <div className={styles.place}>
         {location.isMyLocation ? (
           <div>
@@ -16,15 +34,24 @@ function LocationWidget({ location }: LocationProps) {
           <div>
             <h2>{location.city}</h2>
             <p>
-              {date.getHours()}:{date.getMinutes()}
+              {weatherData?.current.time?.toLocaleString("ru", {
+                hour: "2-digit",
+                minute: "2-digit",
+                hour12: true,
+              })}
             </p>
           </div>
         )}
-        <p>Partly cloudy</p>
+        <p>{weatherCodes.get(weatherData?.current.weatherCode as number)}</p>
       </div>
       <div className={styles.forecast}>
-        <span>21&deg;</span>
-        <p>H:29&deg; L:15&deg;</p>
+        <span>
+          {Math.floor(weatherData?.current.temperature2m as number)}&deg;
+        </span>
+        <p>
+          H: {Math.floor(weatherData?.daily.temperature2mMax[0] as number)}&deg;
+          L: {Math.floor(weatherData?.daily.temperature2mMin[0] as number)}&deg;
+        </p>
       </div>
     </div>
   );
