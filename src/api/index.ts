@@ -1,5 +1,5 @@
 import { fetchWeatherApi } from "openmeteo";
-import { convertDate, range } from "./helpers";
+import { convertDate, getStartHour, range } from "./helpers";
 import { url } from "./constants";
 import { ApiParamsInterface, WeatherInterface } from "./interfaces";
 
@@ -44,6 +44,8 @@ export async function fetchWeather(
   const hourly = response.hourly()!;
   const daily = response.daily()!;
 
+  const startIndex = getStartHour();
+
   return {
     current: {
       time: new Date((Number(current.time()) + utcOffsetSeconds) * 1000),
@@ -60,7 +62,7 @@ export async function fetchWeather(
         hourly.interval()
       )
         .map((t) => new Date((t + utcOffsetSeconds) * 1000))
-        .slice(0, 10),
+        .slice(startIndex, startIndex + 10),
       temperature2m: hourly.variables(0)!.valuesArray()!,
       dewPoint2m: hourly.variables(1)!.valuesArray()!,
       visibility: hourly.variables(2)!.valuesArray()!,
