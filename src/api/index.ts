@@ -55,7 +55,7 @@ export async function fetchWeather(): Promise<WeatherInterface> {
         Number(hourly.time()),
         Number(hourly.timeEnd()),
         hourly.interval()
-      ).map((t) => new Date((t + utcOffsetSeconds) * 1000)),
+      ).map((t) => new Date((t + utcOffsetSeconds) * 1000)).slice(0, 10),
       temperature2m: hourly.variables(0)!.valuesArray()!,
       relativeHumidity2m: hourly.variables(1)!.valuesArray()!,
       dewPoint2m: hourly.variables(2)!.valuesArray()!,
