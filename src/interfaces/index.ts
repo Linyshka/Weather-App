@@ -15,8 +15,10 @@ export interface WeatherPropInterface {
 
 export interface DayPropInterface {
   day: Date;
+  code: number;
   minTemperature: number;
   maxTemperature: number;
+  precipitation: number;
 }
 
 export interface TimeForecastInterface {

@@ -22,12 +22,14 @@ export async function fetchWeather(
     ],
     hourly: ["temperature_2m", "dew_point_2m", "visibility"],
     daily: [
+      "weather_code",
       "temperature_2m_max",
       "temperature_2m_min",
       "sunrise",
       "sunset",
       "uv_index_max",
       "precipitation_sum",
+      "precipitation_probability_max"
     ],
     wind_speed_unit: "ms",
     timezone: "GMT",
@@ -73,12 +75,14 @@ export async function fetchWeather(
         Number(daily.timeEnd()),
         daily.interval()
       ).map((t) => new Date((t + utcOffsetSeconds) * 1000)),
-      temperature2mMax: daily.variables(0)!.valuesArray()!,
-      temperature2mMin: daily.variables(1)!.valuesArray()!,
-      sunrise: daily.variables(2)!.valuesArray()!,
-      sunset: daily.variables(3)!.valuesArray()!,
-      uvIndexMax: daily.variables(4)!.valuesArray()!,
-      precipitationSum: daily.variables(5)!.valuesArray()!,
+      weatherCode: daily.variables(0)!.valuesArray()!,
+      temperature2mMax: daily.variables(1)!.valuesArray()!,
+      temperature2mMin: daily.variables(2)!.valuesArray()!,
+      sunrise: daily.variables(3)!.valuesArray()!,
+      sunset: daily.variables(4)!.valuesArray()!,
+      uvIndexMax: daily.variables(5)!.valuesArray()!,
+      precipitationSum: daily.variables(6)!.valuesArray()!,
+      precipitationProbabilityMax: daily.variables(7)!.valuesArray()!,
     },
   };
 }

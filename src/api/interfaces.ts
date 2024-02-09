@@ -28,12 +28,14 @@ export interface HourlyInterface {
 
 export interface DailyInterface {
   time: Date[];
+  weatherCode: Float32Array;
   temperature2mMax: Float32Array;
   temperature2mMin: Float32Array;
   sunrise: Float32Array;
   sunset: Float32Array;
   uvIndexMax: Float32Array;
   precipitationSum: Float32Array;
+  precipitationProbabilityMax: Float32Array;
 }
 
 export interface WeatherInterface {

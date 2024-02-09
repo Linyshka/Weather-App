@@ -15,10 +15,13 @@ function TenDaysForecast() {
           key={item.toString()}
           day={{
             day: item,
+            code: weatherData.weatherData.daily.weatherCode[index],
             maxTemperature:
               weatherData.weatherData.daily.temperature2mMax[index],
             minTemperature:
               weatherData.weatherData.daily.temperature2mMin[index],
+            precipitation:
+              weatherData.weatherData.daily.precipitationProbabilityMax[index],
           }}
         />
       ))}
