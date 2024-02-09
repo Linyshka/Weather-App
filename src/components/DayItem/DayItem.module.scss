@@ -26,9 +26,9 @@
       flex-direction: column;
 
       span {
-        color: var(--precipitation-color);
-        font-size: 16px;
         font-family: "SF Medium";
+        font-size: 16px;
+        color: var(--precipitation-color);
       }
     }
   }
