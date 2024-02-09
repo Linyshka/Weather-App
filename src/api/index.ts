@@ -20,7 +20,7 @@ export async function fetchWeather(
       "weather_code",
       "wind_speed_10m",
     ],
-    hourly: ["temperature_2m", "dew_point_2m", "visibility"],
+    hourly: ["temperature_2m", "dew_point_2m", "weather_code", "visibility"],
     daily: [
       "weather_code",
       "temperature_2m_max",
@@ -67,7 +67,8 @@ export async function fetchWeather(
         .slice(startIndex, startIndex + 10),
       temperature2m: hourly.variables(0)!.valuesArray()!,
       dewPoint2m: hourly.variables(1)!.valuesArray()!,
-      visibility: hourly.variables(2)!.valuesArray()!,
+      weatherCode: hourly.variables(2)!.valuesArray()!,
+      visibility: hourly.variables(3)!.valuesArray()!,
     },
     daily: {
       time: range(

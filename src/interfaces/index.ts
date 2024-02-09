@@ -23,6 +23,7 @@ export interface DayPropInterface {
 
 export interface TimeForecastInterface {
   time: Date;
+  code: number;
   temperature: number;
 }
 

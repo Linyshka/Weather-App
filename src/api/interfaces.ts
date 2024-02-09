@@ -23,6 +23,7 @@ export interface HourlyInterface {
   time: Date[];
   temperature2m: Float32Array;
   dewPoint2m: Float32Array;
+  weatherCode: Float32Array;
   visibility: Float32Array;
 }
 
