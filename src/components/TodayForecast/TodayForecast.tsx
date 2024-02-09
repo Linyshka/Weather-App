@@ -1,10 +1,10 @@
 import { useContext } from 'react';
 import styles from "./TodayForecast.module.scss";
-import { WeathereContext } from '@/App';
+import { WeatherContext } from '@/App';
 import { weatherCodes } from '@/api/constants';
 
 function TodayForecast() {
-  const weatherData = useContext(WeathereContext);
+  const weatherData = useContext(WeatherContext);
 
   const weatherCode = weatherData?.weatherData.current.weatherCode as number;
   const description = weatherCodes.get(weatherCode);

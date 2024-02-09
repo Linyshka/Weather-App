@@ -2,10 +2,10 @@ import DayItem from "../DayItem";
 
 import styles from "./TenDaysForecast.module.scss";
 import { useContext } from "react";
-import { WeathereContext } from "@/App";
+import { WeatherContext } from "@/App";
 
 function TenDaysForecast() {
-  const weatherData = useContext(WeathereContext);
+  const weatherData = useContext(WeatherContext);
   return (
     <div className={styles.daysForecast}>
       <h2>10-DAY FORECAST</h2>
@@ -15,10 +15,13 @@ function TenDaysForecast() {
           key={item.toString()}
           day={{
             day: item,
+            code: weatherData.weatherData.daily.weatherCode[index],
             maxTemperature:
               weatherData.weatherData.daily.temperature2mMax[index],
             minTemperature:
               weatherData.weatherData.daily.temperature2mMin[index],
+            precipitation:
+              weatherData.weatherData.daily.precipitationProbabilityMax[index],
           }}
         />
       ))}

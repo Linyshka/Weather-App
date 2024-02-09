@@ -20,6 +20,17 @@
     &:nth-child(1) span {
       width: 71px;
     }
+
+    &.iconBlock {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-family: "SF Medium";
+        font-size: 16px;
+        color: var(--precipitation-color);
+      }
+    }
   }
 
   progress {

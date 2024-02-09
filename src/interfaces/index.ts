@@ -15,15 +15,19 @@ export interface WeatherPropInterface {
 
 export interface DayPropInterface {
   day: Date;
+  code: number;
   minTemperature: number;
   maxTemperature: number;
+  precipitation: number;
 }
 
 export interface TimeForecastInterface {
   time: Date;
+  code: number;
   temperature: number;
 }
 
 export interface WeatherContextInterface {
   weatherData: WeatherInterface;
+  setNewData: (data: WeatherInterface) => void;
 }

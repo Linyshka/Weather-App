@@ -6,6 +6,10 @@
   row-gap: 38px;
   width: 65%;
   padding: 0 19px 34px 40px;
+
+  @media (max-width: 1700px) {
+    width: 100%;
+  }
 }
 
 .info {
