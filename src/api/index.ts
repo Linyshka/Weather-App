@@ -87,5 +87,3 @@ export async function fetchWeather(
     },
   };
 }
-
-fetchWeather(53.9, 27.5667).then((weather) => console.log(weather));
